@@ -1,6 +1,16 @@
-// test dot notation fix
-const a = { b: 1 };
-let user = a.b;
+import app from "./app";
+import { Config } from "./config";
 
-user = 2;
-console.log(user);
+const startServer = () => {
+  const PORT = Config.PORT;
+  try {
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
+
+startServer();
