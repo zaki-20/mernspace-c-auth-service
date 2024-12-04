@@ -7,11 +7,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   {
-    ignores: ["dist", "node_modules", "eslint.config.mjs", 'dist/**/*.ts',
-      'dist/**',
-      "**/*.mjs",
-      "eslint.config.mjs",
-      "**/*.js"],
+    ignores: ["dist", "node_modules", "dist/**/*.ts", "dist/**", "**/*.mjs", "eslint.config.mjs", "**/*.js"],
   },
   {
     languageOptions: {
